@@ -49,24 +49,72 @@ body {
 }
 
 .title {
+  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
 }
 
+.light-theme-title {
+  color: #303030;
+}
+
+.dark-theme-title {
+  color: #FFFFFF;
+}
+
 .text {
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
 
+.light-theme-text {
+  color: #555555;
+}
+
+.dark-theme-text {
+  color: #9DA4BD;
+}
+
 .suptitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+}
+
+.light-theme-suptitle {
+  color: #303030;
+}
+
+.light-theme-suptitle::before {
+  display: block;
+  margin-right: 20px;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
+.dark-theme-suptitle {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.dark-theme-suptitle::before,
+.hero-list::before {
+  display: block;
+  margin-right: 20px;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.6);
 }
 
 .container {
@@ -75,4 +123,352 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+/* HEADER */
+.page-header {
+  background-color:#ccc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+  margin-right: 131px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.site-nav {
+  margin-right: auto;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  
+  color: #FFFFFF;
+}
+
+.telephone-link {
+  margin-right: 43px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.booking-link {
+  display: inline-block;
+  min-width: 160px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid #FF6C00;
+  border-radius: 25px;
+}
+
+.booking-link:hover,
+.booking-link:focus {
+  background-color: #FF6C00;
+  color: #FFFFFF;
+}
+
+.dark-theme-booking-link {
+  color: #FFFFFF;
+}
+
+.light-theme-booking-link {
+  color: #303030;
+}
+
+.nav-link,
+.telephone-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav-link:hover,
+.telephone-link:hover,
+.nav-link:focus,
+.telephone-link:focus {
+  color: #FF6C00;
+}
+
+/* HERO */
+.hero-section {
+  
+  background-color: rgba(25, 28, 38, 0.2);
+}
+
+.hero-container {
+  display: flex;
+}
+
+/* ????????? */
+.left-side-hero {
+  display: flex;
+  justify-content: center;
+  width: 100px;   
+}
+
+.hero-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  rotate: -90deg;
+}
+
+.hero-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: #FF6C00;
+}
+.right-side-hero {
+  padding-top: 208px;
+  padding-bottom: 208px;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+/* ABOUT */
+.about-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.about-container {
+  display: flex;
+  /* padding-right: 115px; */
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-right-side {
+  width: 470px;
+}
+
+.description {
+  margin-bottom: 42px;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+/* Services and prices */
+.services-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #111319;
+}
+
+.services-title {
+  margin-bottom: 44px;
+}
+
+.prices {
+  display: flex;
+  gap: 30px;
+}
+
+.services-list {
+  flex-basis: calc((100% - 30px) / 2);
+  padding: 30px 20px;
+  margin-bottom: 44px;
+}
+
+.services-item {
+  display: flex;
+  justify-content: space-between;
+} 
+
+/* ????????? */
+
+.price {
+  display: flex;
+  align-items: baseline;
+  
+}
+.price::before {
+  display: block;
+  margin-right: 12px;
+  margin-left: 12px;
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color:rgba(157, 164, 189, 0.12);
+}
+
+.services-booking-link {
+  text-align: center;
+}
+
+/* FEATURES */
+.features-container {
+  display: flex;
+}
+
+.features-left-side {
+  padding-left: 75px;
+  padding-right: 65px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.features-item {
+  display: block;
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  background-color: #F7F7F7;text-align: center;
+}
+
+.features-item:nth-child(2n) {
+  margin-top: 35px;
+}
+
+.features-number {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.features-decription {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: #303030;
+}
+
+.features-right-side {
+  padding-left: 65px;
+  padding-right: 100px;
+  padding-top: 130px;
+  padding-bottom: 230px;
+}
+
+/* BARBERS */
+.barbers-section {
+padding-top: 120px;
+padding-bottom: 120px;  background-color: #F7F7F7;
+}
+
+.barbers-title {
+  margin-bottom: 44px;
+}
+
+.barbers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.barbers-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.barbers-card {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+.barbers-description {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  color: #FF6C00;
+}
+
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.soc-list-item {
+  width: 44px;
+  height: 44px;
+}
+
+.soc-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.soc-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: #303030;
+}
+
+.soc-list-link:hover .soc-list-icon,
+.soc-list-link:focus .soc-list-icon {
+  fill: #FF6C00;;
 }
