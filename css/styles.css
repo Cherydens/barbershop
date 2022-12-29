@@ -145,6 +145,15 @@ body {
   margin-right: 131px;
 }
 
+.logo-icon {
+  fill: #303030;
+}
+
+.logo-link:hover .logo-icon,
+.logo-link:focus .logo-icon {
+  fill: #FF6C00;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
@@ -187,6 +196,7 @@ body {
   border: 1px solid #FF6C00;
   border-radius: 25px;
 }
+
 
 .booking-link:hover,
 .booking-link:focus {
