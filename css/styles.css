@@ -147,6 +147,8 @@ body {
 
 .logo-icon {
   fill: #303030;
+  transition-property: fill;
+  transition-duration: 0.25s;
 }
 
 .logo-link:hover .logo-icon,
@@ -195,6 +197,8 @@ body {
   text-transform: uppercase;
   border: 1px solid #FF6C00;
   border-radius: 25px;
+  transition-property:background-color, color;
+  transition-duration: 0.25s;
 }
 
 
@@ -217,6 +221,8 @@ body {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition-property: color;
+    transition-duration: 0.25s;
 }
 
 .nav-link:hover,
@@ -554,7 +560,8 @@ padding-bottom: 120px;  background-color: #F7F7F7;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9DA4BD;
-  
+  transition-property: color;
+  transition-duration: 0.25s;
 }
 
 .contacts-telephone-link, 
@@ -565,6 +572,8 @@ padding-bottom: 120px;  background-color: #F7F7F7;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9DA4BD;
+  transition-property: color;
+  transition-duration: 0.25s;
 }
 
 .address-pic {
@@ -578,6 +587,8 @@ padding-top: 5px;
   margin-right: 16px;
   stroke: #9DA4BD;
   fill: none;
+  transition-property: stroke;
+  transition-duration: 0.25s;
 }
 
 .address-link:hover,
@@ -621,13 +632,13 @@ padding-top: 5px;
   color: #9DA4BD;
 }
 
-.soc-list {
+.soc-list-footer {
   display: flex;
   align-items: center;
   
 }
 
-.soc-list::before {
+.soc-list-footer::before {
   display: block;
   margin-right: 20px;
   content: "";
@@ -649,6 +660,8 @@ margin-right: 40px;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition-property: color;
+  transition-duration: 0.25s;
 }
 
 .soc-link:hover,
