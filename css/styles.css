@@ -460,6 +460,7 @@ padding-bottom: 120px;  background-color: #F7F7F7;
 .soc-list-item {
   width: 44px;
   height: 44px;
+  
 }
 
 .soc-list-link {
@@ -470,15 +471,187 @@ padding-bottom: 120px;  background-color: #F7F7F7;
   height: 100%;
   border-radius: 50%;
   background-color: #ffffff;
+
+  transition-property: transform;
+  transition-duration: 0.25s;
 }
 
 .soc-list-icon {
   width: 20px;
   height: 20px;
   fill: #303030;
+  transition-property: fill;
+  transition-duration: 0.25s;
 }
+
+.soc-list-link:hover, 
+.soc-list-link:focus {
+  transform: scale(1.2);
+ }
 
 .soc-list-link:hover .soc-list-icon,
 .soc-list-link:focus .soc-list-icon {
-  fill: #FF6C00;;
+  fill: #FF6C00;
+}
+
+/* Portfolio */
+.portfolio-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.portfolio-suptitle {
+  padding-bottom: 44px;
+}
+
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+.bgc-container {
+  background-color: #191C26;
+}
+
+.booking-contacts-container {
+  display: flex;
+}
+
+.booking-section {
+  width: 600px;
+  padding-top: 130px;
+
+}
+
+.contacts-section {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  padding-left: 100px;
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+}
+
+.address {
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.address-link {
+  display: flex;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9DA4BD;
+  
+}
+
+.contacts-telephone-link, 
+.email-link {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9DA4BD;
+}
+
+.address-pic {
+padding-top: 5px;
+}
+
+.address-icon,
+.contacts-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  stroke: #9DA4BD;
+  fill: none;
+}
+
+.address-link:hover,
+.contacts-telephone-link:hover, 
+.email-link:hover {
+  color: #FF6C00;
+}
+
+.address-link:hover .address-icon,
+.contacts-telephone-link:hover .contacts-icon,
+.email-link:hover .contacts-icon {
+  stroke: #FF6C00;
+}
+
+
+.contacts-suptitle {
+  color: #FFFFFF;
+}
+
+.contacts-suptitle::before {
+  display: block;
+  margin-right: 20px;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.4);
+}
+
+/* FOOTER */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9DA4BD;
+}
+
+.soc-list {
+  display: flex;
+  align-items: center;
+  
+}
+
+.soc-list::before {
+  display: block;
+  margin-right: 20px;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
+.soc-item:not(:last-child) {
+margin-right: 40px;
+}
+
+.soc-link {
+  display: block;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+
+.soc-link:hover,
+.soc-link:focus {
+  color: #FF6C00;
 }
