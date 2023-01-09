@@ -14,7 +14,10 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -417,11 +420,46 @@
         </div>
       </section>
 
+      <!-- Booking And Contacts -->
       <div class="bgc-container">
         <div class="booking-contacts-container container">
           <!-- Online-booking -->
           <section id="online-booking" class="booking-section">
-            <h2 class="dark-theme-title title">Online-booking</h2>
+            <h2 class="booking-title dark-theme-title title">Online-booking</h2>
+            <form class="booking-form">
+              <div class="input-container">
+                <label class="booking-field">
+                  <input
+                    class="booking-input"
+                    name="user_name"
+                    type="text"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="booking-descr">Name*</span>
+                </label>
+                <label class="booking-field">
+                  <input
+                    class="booking-input"
+                    name="user_phone"
+                    type="tel"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="booking-descr">Phone*</span>
+                </label>
+              </div>
+
+              <label class="message-field booking-field">
+                <textarea
+                  class="booking-input message-input"
+                  name="user_message"
+                  placeholder=" "
+                ></textarea>
+                <span class="booking-descr">Message</span>
+              </label>
+              <button class="submit-btn" type="submit">send</button>
+            </form>
           </section>
 
           <!-- Contacts -->
@@ -463,7 +501,7 @@
               </ul>
             </address>
             <p class="contacts-suptitle suptitle">Working hours</p>
-            <p class="dark-theme-text text">Every day from 9:00 to 22:00</p>
+            <p class="worktime-text dark-theme-text text">Every day from 9:00 to 22:00</p>
           </section>
         </div>
       </div>
