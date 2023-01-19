@@ -114,22 +114,13 @@ body {
   color: rgba(157, 164, 189, 0.6);
 }
 
-.light-theme-suptitle::before {
+.suptitle::before {
   display: block;
   margin-right: 20px;
   content: '';
   width: 60px;
   height: 1px;
-  background-color: var(--main-text-color);
-}
-
-.dark-theme-suptitle::before {
-  display: block;
-  margin-right: 20px;
-  content: '';
-  width: 60px;
-  height: 1px;
-  background-color: rgba(157, 164, 189, 0.6);
+  background-color: currentColor;
 }
 
 .booking-link {
@@ -503,7 +494,6 @@ body {
 
 .hero-section {
   background-color: #111319;
-  max-width: 1600px;
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
     url(../images/bg/hero/mobile/slider-img1.jpg);
   background-size: cover;
@@ -709,8 +699,7 @@ body {
 /* Services and prices */
 .services-section {
   background-color: #111319;
-  max-width: 1600px;
-  background-image: linear-gradient(rgba(17, 19, 25, 1), rgba(17, 19, 25, 1)),
+  background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
     url(../images/bg/services/mobile/img.jpg);
   background-size: cover;
   background-position: center;
@@ -772,7 +761,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .services-section {
-    background-image: linear-gradient(rgba(17, 19, 25, 1), rgba(17, 19, 25, 1)),
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
       url(../images/bg/services/tablet/img.jpg);
   }
 
@@ -798,7 +787,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .services-section {
-    background-image: linear-gradient(rgba(17, 19, 25, 1), rgba(17, 19, 25, 1)),
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
       url(../images/bg/services/desktop/img.jpg);
   }
 
@@ -833,44 +822,69 @@ body {
 }
 
 /* FEATURES */
-/* .features-container {
+.features-container {
   display: flex;
+  flex-direction: column-reverse;
+  gap: 44px;
 }
 
-.features-left-side {
-  padding-left: 75px;
-  padding-right: 65px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+.features-title {
+  letter-spacing: 0.048em;
+}
+
+.features-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 }
 
 .features-list {
   display: flex;
   justify-content: space-between;
-  width: 370px;
   flex-wrap: wrap;
   column-gap: 30px;
 }
 
 .features-item {
   display: block;
-  width: 170px;
+  position: relative;
+  width: calc((100% - 30px) / 2);
   height: 133px;
-  padding: 20px 24px;
+  padding: 20px 36px;
   background-color: #f7f7f7;
   text-align: center;
 }
 
+.features-item:nth-child(2n + 1) {
+  margin-bottom: 30px;
+}
+
 .features-item:nth-child(2n) {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .features-number {
+  margin-bottom: 6px;
+
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   letter-spacing: 0.05em;
   color: var(--main-text-color);
+}
+
+.features-number::after {
+  position: absolute;
+  top: 27px;
+  content: '+';
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+
+  color: var(--accent-color);
 }
 
 .features-decription {
@@ -880,17 +894,47 @@ body {
   color: var(--main-text-color);
 }
 
-.features-right-side {
-  padding-left: 65px;
-  padding-right: 100px;
-  padding-top: 130px;
-  padding-bottom: 230px;
-} */
+@media screen and (min-width: 768px) {
+  .features-right-side {
+    width: 500px;
+  }
+
+  .features-title {
+    width: 449px;
+  }
+
+  .features-left-side {
+    width: 450px;
+    align-self: flex-end;
+  }
+
+  .features-item {
+    padding: 20px 44px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-container {
+    flex-direction: row;
+    gap: 130px;
+  }
+
+  .features-left-side {
+    width: 439px;
+    padding-left: 69px;
+  }
+
+  .features-item {
+    padding: 20px 24px;
+  }
+
+  .features-title {
+    width: 430px;
+  }
+}
 
 /* BARBERS */
-/* .barbers-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.barbers-section {
   background-color: #f7f7f7;
 }
 
@@ -900,12 +944,12 @@ body {
 
 .barbers-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-direction: column;
+  gap: 64px;
 }
 
-.barbers-item {
-  flex-basis: calc((100% - 60px) / 3);
+.barbers-pic {
+  max-width: 100%;
 }
 
 .barbers-card {
@@ -968,45 +1012,69 @@ body {
 .soc-list-link:hover .soc-list-icon,
 .soc-list-link:focus .soc-list-icon {
   fill: var(--accent-color);
-} */
-
-/* Portfolio */
-/* .portfolio-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
+@media screen and (min-width: 768px) {
+  .barbers-container {
+    padding-left: 159px;
+    padding-right: 159px;
+  }
+
+  .barbers-item {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .barbers-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .barbers-item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  .barbers-list {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+/* Portfolio */
 .portfolio-suptitle {
-  padding-bottom: 44px;
+  margin-bottom: 71px;
 }
 
 .portfolio-list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
-.portfolio-item {
-  flex-basis: calc((100% - 90px) / 4);
+.portfolio-pic {
+  max-width: 100%;
 }
 
-.bgc-container {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #191c26;
-} */
+@media screen and (min-width: 768px) {
+  .portfolio-suptitle {
+    margin-bottom: 44px;
+  }
+
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 
 /* BOOKING AND CONTACTS */
-/* .booking-contacts-container {
-  display: flex;
-  gap: 30px;
-} */
+.bgc-container {
+  background-color: #191c26;
+}
 
-/* BOOKING */
-/* .booking-section {
-  width: 570px;
-  padding-top: 130px;
+.booking-section {
+  text-align: center;
 }
 
 .booking-title {
@@ -1015,13 +1083,13 @@ body {
 
 .input-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 44px;
   margin-bottom: 44px;
 }
 
 .booking-field {
   display: block;
-  flex-basis: calc((100% - 30px) / 2);
   position: relative;
 }
 
@@ -1101,20 +1169,39 @@ body {
 .submit-btn:hover,
 .submit-btn:focus {
   background-color: var(--accent-color);
-} */
+}
 
-/* CONTACTS */
-/* .contacts-section {
-  flex-grow: 1;
-  padding-top: 130px;
-  padding-bottom: 120px;
-  padding-left: 100px;
-  margin-right: -215px;
-  background-image: linear-gradient(rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)),
-    url(../images/bg.jpg);
-  background-size: auto;
-  background-position: right bottom;
-  background-repeat: no-repeat;
+@media screen and (min-width: 768px) {
+  .booking-section {
+    text-align: left;
+  }
+
+  .input-container {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .booking-field {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+.contacts-section {
+  text-align: center;
+  background-color: #111319;
+  background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+    url(../images/bg/contacts/mobile/img.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and(min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .contacts-section {
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+      url(../images/bg/contacts/mobile/img@2x.jpg);
+  }
 }
 
 .contacts-title {
@@ -1122,7 +1209,7 @@ body {
 }
 
 .address {
-  margin-bottom: 70px;
+  margin-bottom: 44px;
 }
 
 .contacts-item:not(:last-child) {
@@ -1196,14 +1283,113 @@ body {
 }
 
 .worktime-text {
-  margin-bottom: 0;
-} */
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-section {
+    text-align: left;
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+      url(../images/bg/contacts/tablet/img.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .contacts-section {
+      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+        url(../images/bg/contacts/tablet/img@2x.jpg);
+    }
+  }
+
+  .address-and-hours {
+    display: flex;
+    gap: 30px;
+  }
+
+  .address {
+    width: 330px;
+    margin-bottom: 0;
+  }
+
+  .address-link {
+    width: 216px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-section {
+    background-image: unset;
+    background-color: transparent;
+  }
+
+  .bgc-section {
+    background-color: #191c26;
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+      url(../images/bg/contacts/desktop/img.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: calc(50% - 15px) 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .bgc-section {
+      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+        url(../images/bg/contacts/desktop/img@2x.jpg);
+    }
+  }
+
+  .bgc-container {
+    display: flex;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .booking-section {
+    width: calc(50% + 15px);
+  }
+
+  .booking-field {
+    flex-basis: calc((50% - 60px) / 2);
+  }
+
+  .message-field {
+    width: calc(50% - 30px);
+  }
+
+  .contacts-section {
+    padding-left: 100px;
+    width: calc(50% - 15px);
+  }
+
+  .address-and-hours {
+    flex-direction: column;
+    gap: 70px;
+  }
+}
 
 /* FOOTER */
-/* .footer-container {
+
+.page-footer {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.footer-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column-reverse;
+  gap: 20px;
 }
 
 .copyright {
@@ -1215,6 +1401,7 @@ body {
 }
 
 .soc-list-footer {
+  align-self: flex-end;
   display: flex;
   align-items: center;
 }
@@ -1234,8 +1421,6 @@ body {
 
 .soc-link {
   display: block;
-  padding-top: 56px;
-  padding-bottom: 56px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -1249,5 +1434,15 @@ body {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .page-footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 
-*/
+  .footer-container {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
