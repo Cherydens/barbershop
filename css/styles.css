@@ -151,12 +151,12 @@ button {
   transition: background-color var(--transition-function), color var(--transition-function);
 }
 
-.dark-theme-booking-link {
-  color: var(--dark-theme-link-color);
-}
-
 .light-theme-booking-link {
   color: var(--light-theme-link-color);
+}
+
+.dark-theme-booking-link {
+  color: var(--dark-theme-link-color);
 }
 
 .booking-link:hover,
@@ -165,6 +165,7 @@ button {
   color: var(--dark-theme-link-color);
 }
 
+/* ============= MOBILE ============ */
 .section {
   padding-top: 84px;
   padding-bottom: 84px;
@@ -180,40 +181,6 @@ button {
     width: 480px;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .container {
-    width: 768px;
-    padding-left: 39px;
-    padding-right: 39px;
-  }
-
-  .text,
-  .service,
-  .price {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -248,6 +215,7 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  /* MOBILE DISABLED */
   .nav-list,
   .telephone-link,
   .header-booking-link,
@@ -256,6 +224,7 @@ button {
     display: none;
   }
 
+  /* MOBILE MENU OPEN BUTTON */
   .mobile-menu-open-btn {
     padding: 0;
     background-color: transparent;
@@ -275,6 +244,7 @@ button {
     fill: var(--accent-color);
   }
 
+  /* MOBILE MENU */
   .mobile-menu {
     position: fixed;
     z-index: 100;
@@ -416,97 +386,7 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .mobile-menu-open-btn,
-  .mobile-menu {
-    display: none;
-  }
-
-  .page-header {
-    padding-top: 32px;
-  }
-
-  .header-container {
-    position: relative;
-  }
-
-  .logo-link {
-    margin-right: 59px;
-  }
-
-  .logo-icon {
-    fill: var(--light-theme-link-color);
-  }
-
-  .site-nav {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-list {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .nav-link {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-
-    color: var(--dark-theme-link-color);
-  }
-
-  .telephone-link {
-    position: absolute;
-    top: 68px;
-    right: 58px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
-    color: var(--dark-theme-link-color);
-  }
-
-  .nav-link,
-  .telephone-link {
-    display: block;
-    transition: color var(--transition-function);
-  }
-
-  .nav-link:hover,
-  .telephone-link:hover,
-  .nav-link:focus,
-  .telephone-link:focus {
-    color: var(--accent-color);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .logo-link {
-    margin-right: 131px;
-  }
-
-  .nav-list {
-    gap: 30px;
-  }
-
-  .telephone-link {
-    position: static;
-    margin-left: auto;
-    margin-right: 43px;
-  }
-
-  .header-booking-link {
-    margin-right: 17px;
-  }
-}
-
 /* HERO */
-
 .hero-section {
   background-color: var(--dark-theme-bg-color);
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
@@ -538,7 +418,6 @@ button {
 
 .hero-title {
   margin-bottom: 20px;
-
   font-weight: 700;
   font-size: 48px;
   line-height: 1.17;
@@ -546,116 +425,13 @@ button {
   color: var(--dark-theme-title-color);
 }
 
-@media screen and (min-width: 768px) {
-  .hero-section {
-    background-color: var(--light-theme-bg-color);
-    background-image: none;
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and(min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero-section {
-      background-image: none;
-    }
-  }
-
-  .left-side-hero {
-    position: relative;
-    flex-shrink: 0;
-    width: 117px;
-  }
-
-  .hero-list {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 40px;
-    left: 51px;
-    transform: rotate(-90deg);
-    transform-origin: bottom left;
-    gap: 40px;
-  }
-
-  .hero-list::before {
-    display: block;
-    content: '';
-    width: 60px;
-    height: 1px;
-    background-color: var(--light-theme-link-color);
-  }
-
-  .hero-link {
-    display: block;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.2em;
-    color: var(--main-text-color);
-    transition: color var(--light-theme-link-color);
-  }
-
-  .hero-link:hover,
-  .hero-link:focus {
-    color: var(--accent-color);
-  }
-
-  .right-side-hero {
-    padding-top: 272px;
-    padding-bottom: 237px;
-    padding-left: 98px;
-    width: 100%;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/bg/hero/tablet/slider-img1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-color: var(--dark-theme-bg-color);
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and(min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .right-side-hero {
-      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-        url(../images/bg/hero/tablet/slider-img1@2x.jpg);
-    }
-  }
-
-  .text {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .left-side-hero {
-    width: 100px;
-  }
-
-  .hero-list {
-    left: 49px;
-  }
-
-  .right-side-hero {
-    padding-bottom: 208px;
-    padding-left: 100px;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/bg/hero/desktop/slider-img1.jpg);
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and(min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .right-side-hero {
-      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-        url(../images/bg/hero/desktop/slider-img1@2x.jpg);
-    }
+@media screen and (max-width: 360px) {
+  .hero-title {
+    font-size: calc(100vw * 0.1);
   }
 }
 
 /* ABOUT */
-
 .about-title {
   margin-bottom: 20px;
   font-size: 28px;
@@ -670,56 +446,6 @@ button {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: var(--light-theme-text-color);
-}
-
-@media screen and (min-width: 768px) {
-  .about-container {
-    display: flex;
-    gap: 30px;
-  }
-
-  .about-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .about-item {
-    width: 330px;
-  }
-
-  .about-right-side {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .description {
-    margin-bottom: auto;
-  }
-
-  .about-booking-link {
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .about-list {
-    flex-direction: row;
-  }
-
-  .about-item {
-    width: 270px;
-  }
-
-  .about-right-side {
-    width: 470px;
-  }
-
-  .about-title {
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-  }
 }
 
 /* Services and prices */
@@ -790,68 +516,6 @@ button {
 
 .services-booking-link {
   text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .services-section {
-    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-      url(../images/bg/services/tablet/img.jpg);
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and(min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .services-section {
-      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-        url(../images/bg/services/tablet/img@2x.jpg);
-    }
-  }
-
-  .services-title {
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-  }
-
-  .services-and-prices {
-    padding: 32px 40px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .services-section {
-    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-      url(../images/bg/services/desktop/img.jpg);
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and(min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .services-section {
-      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-        url(../images/bg/services/desktop/img@2x.jpg);
-    }
-  }
-
-  .services-and-prices {
-    padding: 0;
-    flex-direction: row;
-    gap: 30px;
-    background-image: none;
-  }
-
-  .services-list {
-    flex-basis: calc((100% - 30px) / 2);
-    padding: 30px 20px;
-  }
-
-  .left-services-list {
-    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-  }
-
-  .right-services-list {
-    background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
-  }
 }
 
 /* FEATURES */
@@ -928,45 +592,6 @@ button {
   color: var(--light-theme-link-color);
 }
 
-@media screen and (min-width: 768px) {
-  .features-right-side {
-    width: 500px;
-  }
-
-  .features-title {
-    width: 449px;
-  }
-
-  .features-left-side {
-    width: 450px;
-    align-self: flex-end;
-  }
-
-  .features-item {
-    padding: 20px 44px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features-container {
-    flex-direction: row;
-    gap: 130px;
-  }
-
-  .features-left-side {
-    width: 439px;
-    padding-left: 69px;
-  }
-
-  .features-item {
-    padding: 20px 24px;
-  }
-
-  .features-title {
-    width: 430px;
-  }
-}
-
 /* BARBERS */
 .barbers-section {
   background-color: #f7f7f7;
@@ -980,10 +605,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 64px;
-}
-
-.barbers-pic {
-  max-width: 100%;
 }
 
 .barbers-card {
@@ -1048,33 +669,6 @@ button {
   fill: var(--accent-color);
 }
 
-@media screen and (min-width: 768px) {
-  .barbers-container {
-    padding-left: 159px;
-    padding-right: 159px;
-  }
-
-  .barbers-item {
-    max-width: 450px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .barbers-container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .barbers-item {
-    flex-basis: calc((100% - 60px) / 3);
-  }
-
-  .barbers-list {
-    flex-direction: row;
-    gap: 30px;
-  }
-}
-
 /* Portfolio */
 .portfolio-suptitle {
   margin-bottom: 71px;
@@ -1084,22 +678,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.portfolio-pic {
-  max-width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio-suptitle {
-    margin-bottom: 44px;
-  }
-
-  .portfolio-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
 }
 
 /* BOOKING AND CONTACTS */
@@ -1205,21 +783,6 @@ button {
   background-color: var(--accent-color);
 }
 
-@media screen and (min-width: 768px) {
-  .booking-section {
-    text-align: left;
-  }
-
-  .input-container {
-    flex-direction: row;
-    gap: 30px;
-  }
-
-  .booking-field {
-    flex-basis: calc((100% - 30px) / 2);
-  }
-}
-
 .contacts-section {
   text-align: center;
   background-color: #111319;
@@ -1323,98 +886,7 @@ button {
   letter-spacing: 0.02em;
 }
 
-@media screen and (min-width: 768px) {
-  .contacts-section {
-    text-align: left;
-    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-      url(../images/bg/contacts/tablet/img.jpg);
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and(min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .contacts-section {
-      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-        url(../images/bg/contacts/tablet/img@2x.jpg);
-    }
-  }
-
-  .address-and-hours {
-    display: flex;
-    gap: 30px;
-  }
-
-  .address {
-    width: 330px;
-    margin-bottom: 0;
-  }
-
-  .address-link {
-    width: 216px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contacts-section {
-    background-image: unset;
-    background-color: transparent;
-  }
-
-  .bgc-section {
-    background-color: #191c26;
-    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-      url(../images/bg/contacts/desktop/img.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: calc(50% - 15px) 100%;
-    object-fit: cover;
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and(min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .bgc-section {
-      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
-        url(../images/bg/contacts/desktop/img@2x.jpg);
-    }
-  }
-
-  .bgc-container {
-    display: flex;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: none;
-    background-color: transparent;
-  }
-
-  .booking-section {
-    width: calc(50% + 15px);
-  }
-
-  .booking-field {
-    flex-basis: calc((50% - 60px) / 2);
-  }
-
-  .message-field {
-    width: calc(50% - 30px);
-  }
-
-  .contacts-section {
-    padding-left: 100px;
-    width: calc(50% - 15px);
-  }
-
-  .address-and-hours {
-    flex-direction: column;
-    gap: 70px;
-  }
-}
-
 /* FOOTER */
-
 .page-footer {
   padding-top: 44px;
   padding-bottom: 44px;
@@ -1468,7 +940,298 @@ button {
   color: var(--accent-color);
 }
 
+/* =========== TABLET ================ */
 @media screen and (min-width: 768px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .container {
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  .text,
+  .service,
+  .price {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+  }
+
+  /* TABLET HEADER */
+  .mobile-menu-open-btn,
+  .mobile-menu {
+    display: none;
+  }
+
+  .page-header {
+    padding-top: 32px;
+  }
+
+  .header-container {
+    position: relative;
+  }
+
+  .logo-link {
+    margin-right: 59px;
+  }
+
+  .logo-icon {
+    fill: var(--light-theme-link-color);
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+
+    color: var(--dark-theme-link-color);
+  }
+
+  .telephone-link {
+    position: absolute;
+    top: 68px;
+    right: 58px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--dark-theme-link-color);
+  }
+
+  .nav-link,
+  .telephone-link {
+    display: block;
+    transition: color var(--transition-function);
+  }
+
+  .nav-link:hover,
+  .telephone-link:hover,
+  .nav-link:focus,
+  .telephone-link:focus {
+    color: var(--accent-color);
+  }
+
+  /* TABLET HERO */
+  .hero-section {
+    background-color: var(--light-theme-bg-color);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(../images/bg/hero/tablet/slider-img1.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: calc(50% + 267px) auto;
+    object-fit: cover;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+        url(../images/bg/hero/tablet/slider-img1@2x.jpg);
+    }
+  }
+
+  .left-side-hero {
+    position: relative;
+    flex-shrink: 0;
+    width: 117px;
+  }
+
+  .hero-list {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    left: 51px;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    gap: 40px;
+  }
+
+  .hero-list::before {
+    display: block;
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: var(--light-theme-link-color);
+  }
+
+  .hero-link {
+    display: block;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--main-text-color);
+    transition: color var(--light-theme-link-color);
+  }
+
+  .hero-link:hover,
+  .hero-link:focus {
+    color: var(--accent-color);
+  }
+
+  .right-side-hero {
+    padding-top: 272px;
+    padding-bottom: 237px;
+    padding-left: 98px;
+    width: 100%;
+  }
+
+  /* TABLET ABOUT */
+  .about-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-item {
+    width: 330px;
+  }
+
+  .about-right-side {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    margin-bottom: auto;
+  }
+
+  .about-booking-link {
+    margin-right: auto;
+  }
+
+  /* TABLET SERVICE */
+  .services-section {
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+      url(../images/bg/services/tablet/img.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .services-section {
+      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+        url(../images/bg/services/tablet/img@2x.jpg);
+    }
+  }
+
+  .services-title {
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+  }
+
+  .services-and-prices {
+    padding: 32px 40px;
+  }
+
+  /* TABLET FEATURES */
+  .features-right-side {
+    width: 500px;
+  }
+
+  .features-title {
+    width: 449px;
+  }
+
+  .features-left-side {
+    width: 450px;
+    align-self: flex-end;
+  }
+
+  .features-item {
+    padding: 20px 44px;
+  }
+
+  /* TABLET BARBERS */
+  .barbers-container {
+    padding-left: 159px;
+    padding-right: 159px;
+  }
+
+  .barbers-item {
+    max-width: 450px;
+  }
+
+  /* TABLET PORTFOLIO */
+  .portfolio-suptitle {
+    margin-bottom: 44px;
+  }
+
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  /* TABLET BOOKING */
+  .booking-section {
+    text-align: left;
+  }
+
+  .input-container {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .booking-field {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  .contacts-section {
+    text-align: left;
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+      url(../images/bg/contacts/tablet/img.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .contacts-section {
+      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+        url(../images/bg/contacts/tablet/img@2x.jpg);
+    }
+  }
+
+  .address-and-hours {
+    display: flex;
+    gap: 30px;
+  }
+
+  .address {
+    width: 330px;
+    margin-bottom: 0;
+  }
+
+  .address-link {
+    width: 216px;
+  }
+
   .page-footer {
     padding-top: 56px;
     padding-bottom: 56px;
@@ -1478,5 +1241,211 @@ button {
     flex-direction: row;
     gap: 0;
     justify-content: space-between;
+  }
+}
+
+/* ============ DESKTOP ========== */
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* DESKTOP HEADER */
+  .logo-link {
+    margin-right: 131px;
+  }
+
+  .nav-list {
+    gap: 30px;
+  }
+
+  .telephone-link {
+    position: static;
+    margin-left: auto;
+    margin-right: 43px;
+  }
+
+  .header-booking-link {
+    margin-right: 17px;
+  }
+
+  /* DESKTOP HERO */
+  .hero-section {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(../images/bg/hero/desktop/slider-img1.jpg);
+    background-size: calc(50% + 500px) auto;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+        url(../images/bg/hero/desktop/slider-img1@2x.jpg);
+    }
+  }
+
+  .left-side-hero {
+    width: 100px;
+  }
+
+  .hero-list {
+    left: 49px;
+  }
+
+  .right-side-hero {
+    padding-bottom: 208px;
+    padding-left: 100px;
+  }
+
+  /* DESKTOP ABOUT */
+  .about-list {
+    flex-direction: row;
+  }
+
+  .about-item {
+    width: 270px;
+  }
+
+  .about-right-side {
+    width: 470px;
+  }
+
+  .about-title {
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+  }
+
+  /* DESKTOP SERVICE */
+  .services-section {
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+      url(../images/bg/services/desktop/img.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .services-section {
+      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+        url(../images/bg/services/desktop/img@2x.jpg);
+    }
+  }
+
+  .services-and-prices {
+    padding: 0;
+    flex-direction: row;
+    gap: 30px;
+    background-image: none;
+  }
+
+  .services-list {
+    flex-basis: calc((100% - 30px) / 2);
+    padding: 30px 20px;
+  }
+
+  .left-services-list {
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+
+  .right-services-list {
+    background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
+
+  /* DESKTOP FEATURES */
+  .features-container {
+    flex-direction: row;
+    gap: 130px;
+  }
+
+  .features-left-side {
+    width: 439px;
+    padding-left: 69px;
+  }
+
+  .features-item {
+    padding: 20px 24px;
+  }
+
+  .features-title {
+    width: 430px;
+  }
+
+  /* DESKTOP BARBERS */
+  .barbers-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .barbers-item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  .barbers-list {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .contacts-section {
+    background-image: unset;
+    background-color: transparent;
+  }
+
+  .bgc-section {
+    background-color: #191c26;
+    background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+      url(../images/bg/contacts/desktop/img.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: calc(50% - 15px) 100%;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .bgc-section {
+      background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)),
+        url(../images/bg/contacts/desktop/img@2x.jpg);
+    }
+  }
+
+  .bgc-container {
+    display: flex;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .booking-section {
+    width: calc(50% + 15px);
+  }
+
+  .booking-field {
+    flex-basis: calc((50% - 60px) / 2);
+  }
+
+  .message-field {
+    width: calc(50% - 30px);
+  }
+
+  .contacts-section {
+    padding-left: 100px;
+    width: calc(50% - 15px);
+  }
+
+  .address-and-hours {
+    flex-direction: column;
+    gap: 70px;
   }
 }
