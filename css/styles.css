@@ -427,7 +427,7 @@ button {
 
 @media screen and (max-width: 360px) {
   .hero-title {
-    font-size: calc(100vw * 0.1);
+    font-size: calc(100vw * 0.12);
   }
 }
 
@@ -1080,8 +1080,8 @@ button {
     font-size: 11px;
     line-height: 1.36;
     letter-spacing: 0.2em;
-    color: var(--main-text-color);
-    transition: color var(--light-theme-link-color);
+    color: var(--light-theme-link-color);
+    transition: color var(--transition-function);
   }
 
   .hero-link:hover,
